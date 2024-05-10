@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>application web pour gérer une liste de livres</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container1">
+      <div class="titlePage">
+        <h1>Application de Suivi de Lecture</h1>
+      </div>
+      <div class="containerButtonAdd">
+          <button id="addModalButtonBook">+ Ajouter un nouveau livre</button>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal" id="modalId">
+        <div class="modalContent">
+            <span class="close">X</span>
+            <div>
+                <form id="book-form">
+                    <label for="titre">Titre du livre</label>
+                    <input class="form-input" type="text" name="titre" id="titre">
+
+
+                    <label for="auteur">Auteur du livre</label>
+                    <input class="form-input" type="text" name="auteur" id="auteur">
+
+                    <label for="lu">Lu</label>
+                    <input type="checkbox" name="lu" id="lu" value="lu">
+                    <br>
+                    <br>
+
+                    <button type="submit" id="addBookButton" class="addBookButton">Ajouter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="books">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Identifiant</th>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Lu</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
